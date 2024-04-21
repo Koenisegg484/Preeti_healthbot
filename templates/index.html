@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!!Preeti!!</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='grim-reaper.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- <link rel="stylesheet" href="../static/styles.css">
+    <link rel="shortcut icon" href="../static/images/grim-reaper.png" type="image/x-icon"> -->
+</head>
+<body>
+    <nav class="nav-bar">        
+        <div class="nav-head">
+            <div class="logo">
+                Logo
+            </div>
+            <div class="tag">
+                Tag
+            </div>
+            <div class="options">
+                <div>op1</div>
+                <div>op2</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="chatting-area">
+        <!-- <div class="user-chat">
+            <p>this is the user lorem70</p>
+        </div> -->
+        {% if bot_response %}
+            <div class="bot-response">
+                <p>{{ bot_response }}</p>
+            </div>
+        {% endif %}
+    </div>
+
+
+    <div class="input-form" >
+        <form method="post" class="form" action="/bot">
+            <input type="text" id="user-input" placeholder="Tell me your symptoms..." name="user-input">
+            <button type="submit" id="sed-btn" onclick="createChat_Bar()">Send</button>
+        </form>
+    </div>
+
+    <script>
+
+        document.querySelector('.form1').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const chatText = document.getElementById("user-input").value;
+            if (chatText.trim() !== "") {
+                console.log(chatText);
+    
+                var chattingArea = document.querySelector(".chatting-area");
+                chattingArea.innerHTML += `<div class="user-chat">
+                    <p>${chatText}</p>
+                </div>`;
+            } else {
+                console.log("Empty string: no output");
+            }
+    
+            document.getElementById("user-input").value = "";
+        });
+
+        function createChat_Bar(){
+            const chat_text = document.getElementById("user-input").value;
+            if(chat_text != ""){    
+                console.log(chat_text);
+            }else{
+                console.log("Empty string : no output")
+            }
+
+            var chatting_area = document.querySelector(".chatting-area");
+            chatting_area.innerHTML += `<div class="user-chat">
+                                        <p>${chat_text}</p>
+                                        </div>`;
+
+        }
+
+    </script>    
+</body>
+</html>

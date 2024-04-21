@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0px 3rem;
+    background-color: antiquewhite;
+}
+
+
+/* CSS for the navigation bar */
+.nav-bar{
+    background-color: aquamarine;
+    height: 5rem;
+    width: 94%;
+    padding: 1.4rem 1.5rem;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+}
+
+.nav-bar .nav-head{
+    background-color: aliceblue;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-head .logo{
+    width: fit-content;
+    align-content: center;
+}
+
+.nav-head .tag{
+    background-color: aqua;
+    width: 21rem;
+    margin: 0 20px;
+    margin: auto;
+    align-content: center;
+}
+.nav-head .options{
+    display: flex;
+    align-content: center;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+}
+
+.options *{
+    align-content: center;
+}
+
+
+/* CSS for the chatting area */
+
+.chatting-area{
+    /* background-color: rgb(129, 85, 19); */
+    margin-top: 6rem;
+    margin-bottom: 7rem;
+}
+
+.chatting-area .user-chat{
+    background-color: chartreuse;
+    margin: 10px;
+    width: max-content;
+    max-width: 70%;
+    padding: 1em 1.5em;
+    border: 0 solid chartreuse;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+
+
+
+
+/* CSS for the input form */
+
+.input-form{
+    background-color: rgb(189, 139, 78);
+    width: 94%;
+    height: 6rem;
+    margin: 10px auto;
+    text-align: center;
+    align-content: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.input-form .form{
+    padding: 0 1em;
+}
+
+.input-form .form #user-input{
+    width: 90%;
+    height: 3rem;
+    padding: 5px 25px;
+    border: solid grey 3px;
+    border-radius: 40px;
+    font-size: 1.4rem;
+}
+
+.input-form .form #sed-btn{
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    border-radius: 50%;
+    font-size: 1rem;
+}
