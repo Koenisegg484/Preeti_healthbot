@@ -1,2 +1,2 @@
 # Preeti_healthbot
-This is a Preeti, a healthbot, you can ask her about your daily illnesses which usually do not require professional medical attention, and she will do her best to assisst you.
+This is Preeti, a healthbot, you can ask her about your daily illnesses which usually do not require professional medical attention, and she will do her best to assisst you.
